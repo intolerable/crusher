@@ -18,6 +18,7 @@ withHeader x = do
   doctype_
   head_ $ do
     title_ "crusher"
+    link_ [rel_ "stylesheet", href_ "/stylesheet.css", type_ "text/css"]
   body_ $
     div_ [id_ "main"] $ do
       a_ [href_ "/"] $ h1_ "crusher"
