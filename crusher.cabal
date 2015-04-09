@@ -27,7 +27,7 @@ library
     lucid,
     optparse-applicative,
     process,
-    scotty,
+    scotty >= 0.9.1 && < 0.10,
     stitch,
     stm,
     text,
