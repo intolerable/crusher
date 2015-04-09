@@ -28,7 +28,6 @@ library
     containers,
     directory,
     lucid,
-    mtl,
     optparse-applicative,
     process,
     scotty,

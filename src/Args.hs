@@ -1,6 +1,6 @@
 module Args where
 
-import Control.Monad.Identity
+import Data.Functor.Identity
 import Data.Maybe
 import Data.Monoid
 import Options.Applicative
@@ -64,6 +64,6 @@ validate (Arguments m p t) = do
     p' = return $ fromMaybe (modeToPort m) p
 
 getArguments :: IO (Arguments Identity)
-getArguments = validate =<< execParser ( info (helper <*> options) $ mconcat
+getArguments = validate =<< execParser (info (helper <*> options) $ mconcat
   [ fullDesc
   , header "Site for crushing PNGs" ])

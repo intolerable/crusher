@@ -5,8 +5,8 @@ import qualified Markup
 
 import Control.Applicative
 import Control.Monad.IO.Class
-import Control.Monad.Identity
 import Data.ByteString.Lazy (ByteString)
+import Data.Functor.Identity
 import Lucid (Html, renderText)
 import Network.Wai.Parse (FileInfo(..))
 import System.Exit
