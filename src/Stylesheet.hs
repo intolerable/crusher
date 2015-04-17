@@ -90,11 +90,11 @@ reset = do
     "line-height" .= "1"
   "ol, ul" ?
     "list-style" .= "none"
-  "blockquote, q" ?
+  "blockquote, q" ? do
     "quotes" .= "none"
-  "blockquote:before, blockquote:after, q:before, q:after" ? do
-    "content" .= "\"\""
-    "content" .= "none"
+    "&:before, &:after" ? do
+      "content" .= "\"\""
+      "content" .= "none"
   "table" ?
     "border" -: do
       "collapse" .= "collapse"
